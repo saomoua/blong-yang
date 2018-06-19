@@ -1,7 +1,7 @@
 {
-  "name": "foundation-zurb-template",
-  "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "name": "blong-yang",
+  "version": "0.0.1",
+  "description": "Blong Yang for District 2 Hennepin County Commissioner website 2018",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
@@ -49,11 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-zurb-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/saomoua/blong-yang.git"
   },
   "babel": {
     "presets": [
