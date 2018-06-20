@@ -20,6 +20,9 @@ PATHS:
   # SRC
   src: "src"
   srcPages: "src/pages/**/*.{html,hbs,handlebars}"
+  srcPagesData:
+    - "src/{layouts,partials}/**/*.{html,hbs,handlebars}"
+    - "src/data/**/*.{json,yml}"
   srcScssApp: "src/assets/scss/app.scss"
   srcFilesScss: "src/assets/scss/**/*.scss"
   srcFilesImages: "src/assets/img/**/*.{gif,jpeg,jpg,png,tiff,webp}"
