@@ -17,14 +17,37 @@ UNCSS_OPTIONS:
 
 # Gulp will reference these paths when it copies files
 PATHS:
-  # Path to dist folder
-  dist: "dist"  
+  # SRC
+  src: "src"
+  srcPages: "src/pages/**/*.{html,hbs,handlebars}"
+  srcScssApp: "src/assets/scss/app.scss"
+  srcFilesScss: "src/assets/scss/**/*.scss"
+  srcFilesImages: "src/assets/img/**/*.{gif,jpeg,jpg,png,tiff,webp}"
+  srcFilesJS: "src/assets/js/lib/**/*.js"
+  srcSVG: "src/assets/svg"
+  srcFilesSVG:
+    - "src/assets/svg/**/*.svg"
+    - "!src/assets/svg/templates/svg-symbols.{css,svg}"
+    - "!src/assets/svg/svg-symbols.{css,svg}"
+  srcSvgSpriteInjectionInput: "src/partials/svg/svg-sprite-inject.html"
+  srcSvgSpriteInjectionOutput: "src/partials/svg"
+
+  # DIST
+  dist: "dist"
+  distAssets: "dist/assets"
+  distCSS: "dist/assets/css"
+  distJS: "dist/assets/js"
+  distImages: "dist/assets/img"
+
+  # STYLEGUIDE
+  srcStyleguideFiles: "src/styleguide/**/*.{html,md}"
+
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
     - "!src/assets/{img,js,scss}{,/**/*}"
   # Paths to Sass libraries, which can then be loaded with @import
-  sass:
+  sassLibraries:
     - "node_modules/foundation-sites/scss"
     - "node_modules/motion-ui/src"
   # Paths to JavaScript entry points for webpack to bundle modules
