@@ -29,7 +29,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(svgSprite), pages, sass, images, injectSvgSprite, javascript, copy, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -45,12 +45,12 @@ function clean(done) {
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
-    .pipe(gulp.dest(PATHS.dist + '/assets'));
+    .pipe(gulp.dest(PATHS.distAssets));
 }
 
 // Copy page templates into finished HTML files
 function pages() {
-  return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+  return gulp.src(PATHS.srcPages)
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
@@ -78,10 +78,10 @@ function styleGuide(done) {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
-  return gulp.src('src/assets/scss/app.scss')
+  return gulp.src(PATHS.srcScssApp)
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.sass
+      includePaths: PATHS.sassLibraries
     })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
@@ -91,7 +91,7 @@ function sass() {
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(gulp.dest(PATHS.distCSS))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -120,17 +120,47 @@ function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/js'));
+    .pipe(gulp.dest(PATHS.distJS));
 }
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src(PATHS.srcFilesImages)
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
-    .pipe(gulp.dest(PATHS.dist + '/assets/img'));
+    .pipe(gulp.dest(PATHS.distImages));
+}
+
+// Create svg-sprite
+function svgSprite() {
+  return gulp.src(PATHS.srcFilesSVG)
+    .pipe($.svgSymbols({
+      id: '%f',
+      svgClassname: 'svg-sprite-master',
+      // templates: [
+      //   path.join(__dirname, 'src/assets/svg/templates/svg-symbols.svg'),
+      //   'default-css'
+      // ],
+      templates: ['default-svg', 'default-css'],
+      title: '%f'
+    }))
+    .pipe(gulp.dest(PATHS.srcSVG));
+}
+
+// inject svgSprite
+function injectSvgSprite() {
+  return gulp.src(PATHS.srcSvgSpriteInjectionInput)
+    .pipe($.styleInject({
+      encapsulated: false,
+      path: 'src/assets/svg/'
+    }))
+    .pipe($.rename('svg-sprite-master.html'))
+    .pipe(gulp.dest(PATHS.srcSvgSpriteInjectionOutput))
+    .pipe(browser.reload({
+      stream: true
+    }));
 }
 
 // Start a server with BrowserSync to preview the site in
@@ -150,10 +180,11 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
-  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
-  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
-  gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
+  gulp.watch(PATHS.srcPages).on('all', gulp.series(pages, browser.reload));
+  gulp.watch(PATHS.srcPagesData).on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch(PATHS.srcFilesScss).on('all', sass);
+  gulp.watch(PATHS.srcFilesJS).on('all', gulp.series(javascript, browser.reload));
+  gulp.watch(PATHS.srcFilesImages).on('all', gulp.series(images, browser.reload));
+  gulp.watch(PATHS.srcFilesSVG).on('all', gulp.series(svgSprite, injectSvgSprite, browser.reload));
+  gulp.watch(PATHS.srcStyleguideFiles).on('all', gulp.series(styleGuide, browser.reload));
 }
