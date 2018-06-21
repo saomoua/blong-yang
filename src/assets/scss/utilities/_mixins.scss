@@ -75,13 +75,13 @@
 }
 @mixin section-margin {
   margin: rem-calc(20) 0;
-  @include breakpoint(medium-tall) {
+  @include breakpoint(large) {
     margin: rem-calc(40) 0;
   }
 }
 @mixin section-padding {
   padding: rem-calc(20) 0;
-  @include breakpoint(medium-tall) {
+  @include breakpoint(large) {
     padding: rem-calc(40) 0;
   }
 }
