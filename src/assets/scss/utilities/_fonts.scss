@@ -39,7 +39,7 @@ $font-style-italic: italic;
   src: url("../fonts/lato/lato-light.eot?#iefix") format('embedded-opentype'), url("../fonts/lato/lato-light.svg#lato-light") format('svg'), url("../fonts/lato/lato-light.woff") format('woff'), url("../fonts/lato/lato-light.woff2") format('woff2'), url("../fonts/lato/lato-light.ttf") format('truetype');
   font-display: swap;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $font-weight-light;
 }
 // REGULAR
 @font-face {
