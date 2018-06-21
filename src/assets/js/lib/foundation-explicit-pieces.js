@@ -1,4 +1,6 @@
-import $ from 'jquery';
+import $ from "jquery";
+import whatInput from "what-input";
+
 import { Foundation } from 'foundation-sites/js/foundation.core';
 import { rtl, GetYoDigits, transitionend } from 'foundation-sites/js/foundation.util.core';
 import { Box } from 'foundation-sites/js/foundation.util.box'
@@ -101,3 +103,7 @@ Foundation.plugin(Tooltip, 'Tooltip');
 Foundation.plugin(ResponsiveAccordionTabs, 'ResponsiveAccordionTabs');
 
 module.exports = Foundation;
+
+$(document).foundation();
+window.$ = $;
+window.jQuery = $;
