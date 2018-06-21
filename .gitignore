@@ -1,6 +1,7 @@
 .DS_Store
+*.swp
+bower_components
+concat
+dist
 node_modules
 npm-debug.log
-bower_components
-dist
-*.swp
