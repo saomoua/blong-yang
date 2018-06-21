@@ -1,10 +1,11 @@
-.svg-sprite {
-  display: none;
+a {
+  @include links-underline;
 }
 
 .figure {
   @include box-shadow;
   background-color: $color-gray-dark;
+  margin: rem-calc(20 0);
   text-align: center;
   // display: flex;
   // flex-flow: column wrap;
@@ -26,6 +27,15 @@
 .block-grid {
   margin: rem-calc(40 0);
 }
+
 .block-grid-3col {
   text-align: center;
+
+  .svg {
+    fill: $color-gray-medium;
+  }
+}
+
+.svg-sprite {
+  display: none;
 }
