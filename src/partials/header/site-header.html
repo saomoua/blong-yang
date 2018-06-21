@@ -1,19 +1,20 @@
 <header class="site-header">
   <div class="grid-container">
     <div class="grid-x site-header-grid">
-      <div class="cell small-8">
+      <div class="cell small-8 large-4">
         <a class="site-header-link" href="#" aria-label="Vote Blong Yang for District 2 Hennepin County Commissioner">
           <svg class="svg site-logo">
             <use xlink:href="#site-logo"></use>
           </svg>
         </a>
       </div>
-      <div class="cell shrink">
-        <button class="menu-toggle">
+      <div class="cell shrink large-8">
+        <button class="menu-toggle hide-for-large" aria-label="Open site menu" type="button" data-toggle="site-nav-offcanvas">
           <svg class="svg icon-bars">
             <use xlink:href="#icon-bars"></use>
           </svg>
         </button>
+        {{> site-nav }}
       </div>
     </div>
   </div>
