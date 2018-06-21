@@ -34,7 +34,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(svgSprite), pages, sass, images, injectSvgSprite, javascript, copy, styleGuide));
+  gulp.series(clean, gulp.parallel(svgSprite, jsES5, jsES6), pages, sass, images, injectSvgSprite, javascript, styleGuide, copy));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -116,12 +116,46 @@ let webpackConfig = {
 }
 // Combine JavaScript into one file
 // In production, the file is minified
-function javascript() {
-  return gulp.src(PATHS.entries)
+// Combine ES5 scripts without webpack
+function jsES5() {
+  return gulp.src(PATHS.jsES5)
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('scripts-es5.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => {
+        console.log(e);
+      })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.srcJSConcat));
+}
+// Combine ES6 scripts through webpack
+function jsES6() {
+  return gulp.src(PATHS.jsES6)
     .pipe(named())
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
     .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => {
+        console.log(e);
+      })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.srcJSConcat));
+}
+// Combine JavaScript into one file
+// In production, the file is minified
+function javascript() {
+  return gulp.src(PATHS.javascript)
+    .pipe(named())
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('app.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => {
+        console.log(e);
+      })
+    ))
+    .pipe($.if(!PRODUCTION, $.uglify()
       .on('error', e => {
         console.log(e);
       })
@@ -191,7 +225,8 @@ function watch() {
   gulp.watch(PATHS.srcPages).on('all', gulp.series(pages, browser.reload));
   gulp.watch(PATHS.srcPagesData).on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch(PATHS.srcFilesScss).on('all', gulp.series(sass, browser.reload));
-  gulp.watch(PATHS.srcFilesJS).on('all', gulp.series(javascript, browser.reload));
+  gulp.watch(PATHS.jsES5).on('all', gulp.series(jsES5, javascript, browser.reload));
+  gulp.watch(PATHS.jsES6).on('all', gulp.series(jsES6, javascript, browser.reload));
   gulp.watch(PATHS.srcFilesImages).on('all', gulp.series(images, browser.reload));
   gulp.watch(PATHS.srcFilesSVG).on('all', gulp.series(svgSprite, injectSvgSprite, browser.reload));
   gulp.watch(PATHS.srcStyleguideFiles).on('all', gulp.series(styleGuide, browser.reload));
