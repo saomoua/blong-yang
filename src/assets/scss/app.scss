@@ -1,5 +1,8 @@
 @charset 'utf-8';
 
+@import "utilities/colors";
+@import "utilities/fonts";
+@import "utilities/mixins";
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -52,8 +55,5 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import "utilities/colors";
-@import "utilities/fonts";
-@import "utilities/mixins";
-@import "components/site-header";
 @import "../svg/svg-symbols";
+@import "components/site-header";
