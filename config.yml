@@ -27,6 +27,8 @@ PATHS:
   srcFilesScss: "src/assets/scss/**/*.scss"
   srcFilesImages: "src/assets/img/**/*.{gif,jpeg,jpg,png,tiff,webp}"
   srcFilesJS: "src/assets/js/lib/**/*.js"
+  srcJS: "src/assets/js"
+  srcJSConcat: "src/assets/js/concat"
   srcSVG: "src/assets/svg"
   srcFilesSVG:
     - "src/assets/svg/**/*.svg"
@@ -53,6 +55,13 @@ PATHS:
   sassLibraries:
     - "node_modules/foundation-sites/scss"
     - "node_modules/motion-ui/src"
+  # Paths to ES5 packages
+  jsES5:
+    - "src/assets/js/lib/sticky-nav-on-scroll.js"
+    - "src/assets/js/lib/project-functions.js"
   # Paths to JavaScript entry points for webpack to bundle modules
-  entries:
-    - "src/assets/js/app.js"
+  jsES6:
+    - "src/assets/js/lib/foundation-explicit-pieces.js"
+  javascript:
+    - "src/assets/js/concat/foundation-explicit-pieces.js"
+    - "src/assets/js/concat/scripts-es5.js"
