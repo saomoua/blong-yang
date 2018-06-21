@@ -69,6 +69,11 @@
     text-decoration-color: $decoration-hover;
   }
 }
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 @mixin section-margin {
   margin: rem-calc(20) 0;
   @include breakpoint(medium-tall) {
