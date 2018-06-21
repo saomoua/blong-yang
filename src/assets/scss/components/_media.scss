@@ -2,6 +2,10 @@ a {
   @include links-underline;
 }
 
+strong {
+  font-weight: $font-weight-bold;
+}
+
 .figure {
   @include box-shadow;
   background-color: $color-gray-dark;
@@ -33,6 +37,33 @@ a {
 
   .svg {
     fill: $color-gray-medium;
+  }
+}
+
+.list-pipes {
+  @include list-reset;
+  display: flex;
+  flex-flow: row wrap;
+
+  > li {
+    position: relative;
+
+    &::after {
+      background-color: rgba($color-gray-medium, .5);
+      content: '';
+      display: inline;
+      height: rem-calc(16);
+      left: 100%;
+      position: absolute;
+      top: 25%;
+      width: rem-calc(1);
+    }
+
+    > a {
+      display: block;
+      line-height: 1;
+      padding: rem-calc(4 16);
+    }
   }
 }
 
