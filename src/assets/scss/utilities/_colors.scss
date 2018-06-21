@@ -7,6 +7,10 @@ $color-gray-medium: #666;
 $color-gray-dark: #333;
 $color-white: #fff;
 
+$color-links: $color-brand-blue;
+$color-links-underline: rgba($color-links, .25);
+$color-links-hover: darken($color-links, .75);
+
 // foundation colors
 // $light-gray: #e6e6e6;
 // $medium-gray: #cacaca;
