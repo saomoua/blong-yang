@@ -1,3 +1,19 @@
 .site-header {
-  background-color: tomato;
+  @include box-shadow;
+  background-color: $color-white;
+  padding: rem-calc(16 0);
+}
+
+.site-header-grid {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header-link {
+  display: block;
+}
+
+.site-logo {
+  height: rem-calc(50);
+  width: rem-calc(250);
 }
