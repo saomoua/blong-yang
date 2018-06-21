@@ -1,3 +1,24 @@
 .svg-sprite {
   display: none;
 }
+
+.figure {
+  @include box-shadow;
+  background-color: $color-gray-dark;
+  text-align: center;
+  // display: flex;
+  // flex-flow: column wrap;
+}
+
+.figure-image {}
+
+.figure-caption {
+  background-color: $color-gray-dark;
+  color: $color-white;
+  font-style: italic;
+  padding: rem-calc(10 20);
+
+  p {
+    margin-bottom: 0;
+  }
+}
