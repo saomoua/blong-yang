@@ -1,3 +1,7 @@
+.site-wrapper {
+  overflow: hidden;
+}
+
 .site-header {
   @include box-shadow;
   background-color: $color-white;
