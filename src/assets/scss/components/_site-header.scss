@@ -6,6 +6,29 @@
   @include box-shadow;
   background-color: $color-white;
   padding: rem-calc(16 0);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+@media all and (-ms-high-contrast:none) {
+  // IE11 needs higher z-index to make header appear on top of all things
+  .site-header {
+    z-index: 100;
+  }
+}
+
+.site-header.is-down,
+.site-header.is-up {
+  @include transition(top 100ms ease-in-out);
+}
+
+.site-header.is-down {
+  top: 0;
+}
+
+.site-header.is-up {
+  top: rem-calc(-300) !important;
 }
 
 .site-header-grid {
@@ -20,4 +43,8 @@
 .site-logo {
   height: rem-calc(50);
   width: rem-calc(250);
+}
+
+.section {
+  @include section-padding;
 }
