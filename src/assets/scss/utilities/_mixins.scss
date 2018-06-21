@@ -1,0 +1,93 @@
+// CUSTOM PROJECT MIXINS
+@mixin antialiasing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin box-shadow($x: 0, $y: rem-calc(2), $blur: rem-calc(4), $spread: 0, $color: rgba($color-black, 0.1)) {
+  box-shadow: $x $y $blur $spread $color;
+}
+@mixin button {
+  border: rem-calc(1) solid transparent;
+  cursor: pointer;
+  font-family: $font-headings;
+  font-size: rem-calc(18);
+  font-weight: bold;
+  text-transform: capitalize;
+
+  &:focus,
+  &:hover {
+    @include transition(all 100ms ease-in-out);
+    background-color: transparent;
+    border: rem-calc(1) solid $color-text;
+    color: $color-text;
+  }
+}
+// element centered on Y axis of container
+@mixin centered-axis-x($position: absolute, $left: 50%, $transformX: -50%) {
+  position: $position;
+  left: $left;
+  transform: translateX($transformX);
+}
+@mixin centered-axis-xy($position: absolute, $left: 50%, $top: 50%, $transformX: -50%, $transformY: -50%) {
+  left: $left;
+  position: $position;
+  top: $top;
+  transform: translate($transformX, $transformY);
+}
+// element centered on Y axis of container
+@mixin centered-axis-y($position: absolute, $top: 50%, $transformY: -50%) {
+  position: $position;
+  top: $top;
+  transform: translateY($transformY);
+}
+@mixin is-clipped {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px 1px 1px 1px);
+  height: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+}
+@mixin links-underline($color: $color-links, $font: $font-headings, $font-weight: 700, $decoration-color: $color-links-underline, $color-hover: $color-links, $decoration-hover: $color-links-hover) {
+  @include antialiasing;
+  @include transition(all 150ms ease-in-out);
+  color: $color;
+  font-family: $font;
+  font-weight: $font-weight;
+  text-decoration: underline;
+  text-decoration-color: $decoration-color;
+  text-decoration-skip: ink;
+
+  &:focus,
+  &:hover {
+    color: $color-hover;
+    text-decoration-color: $decoration-hover;
+  }
+}
+@mixin section-margin {
+  margin: rem-calc(20) 0;
+  @include breakpoint(medium-tall) {
+    margin: rem-calc(40) 0;
+  }
+}
+@mixin section-padding {
+  padding: rem-calc(20) 0;
+  @include breakpoint(medium-tall) {
+    padding: rem-calc(40) 0;
+  }
+}
+@mixin text-shadow($x: 0, $y: rem-calc(2), $blur: rem-calc(2), $color: rgba($color-black, 0.5)) {
+  text-shadow: $x $y $blur $color;
+}
+// triple dots in variable allows for multiple chained values
+@mixin transform($transforms...) {
+  transform: $transforms;
+}
+@mixin transition($args...) {
+  transition: $args;
+}
