@@ -53,11 +53,10 @@
   position: absolute;
   width: 1px;
 }
-@mixin links-underline($color: $color-links, $font: $font-headings, $font-weight: 700, $decoration-color: $color-links-underline, $color-hover: $color-links, $decoration-hover: $color-links-hover) {
+@mixin links-underline($color: $color-links, $font-weight: $font-weight-bold, $decoration-color: $color-links-underline, $color-hover: $color-links-hover, $decoration-hover: $color-links-hover) {
   @include antialiasing;
   @include transition(all 150ms ease-in-out);
   color: $color;
-  font-family: $font;
   font-weight: $font-weight;
   text-decoration: underline;
   text-decoration-color: $decoration-color;
