@@ -52,5 +52,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import "utilities/colors";
+@import "utilities/fonts";
+@import "utilities/mixins";
 @import "components/site-header";
 @import "../svg/svg-symbols";
