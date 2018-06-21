@@ -1,0 +1,132 @@
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+  @-o-keyframes $animation_name {
+    @content;
+  }
+  @keyframes $animation_name {
+    @content;
+  }
+}
+@mixin animation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $fillmode;
+  animation-direction: $direction;
+}
+// -- Slide Animations Keyframes -- //
+// Slide Out Top from Center
+@include keyframe(animation-slide-out-up) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(0,-100%);
+  }
+}
+@include keyframe(animation-slide-out-down) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(0,100%);
+  }
+}
+// Slide Out Left from Center
+@include keyframe(animation-slide-out-left) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(-100%,0);
+  }
+}
+// Slide out Right from Center
+@include keyframe(animation-slide-out-right) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(100%,0);
+  }
+}
+@include keyframe(animation-slide-in-up) {
+  0% {
+    transform: translate(0,100%);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+@include keyframe(animation-slide-in-down) {
+  0% {
+    transform: translate(0,-100%);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+// Slide in Left to Center
+@include keyframe(animation-slide-in-left) {
+  0% {
+    transform: translate(-100%,0);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+// Slide in Right to Center
+@include keyframe(animation-slide-in-right) {
+  0% {
+    transform: translate(100%,0);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+// -- Slide Animations Classes -- //
+
+.animation-slide-in-up {
+  @include animation(0, 0.5s, animation-slide-in-up, ease);
+}
+
+.animation-slide-in-down {
+  @include animation(0, 0.5s, animation-slide-in-down, ease);
+}
+
+.animation-slide-in-right {
+  @include animation(0, 0.5s, animation-slide-in-right, ease);
+}
+
+.animation-slide-in-left {
+  @include animation(0, 0.5s, animation-slide-in-left, ease);
+}
+
+.animation-slide-out-up {
+  @include animation(0, 0.5s, animation-slide-out-up, ease);
+}
+
+.animation-slide-out-down {
+  @include animation(0, 0.5s, animation-slide-out-down, ease);
+}
+
+.animation-slide-out-right {
+  @include animation(0, 0.5s, animation-slide-out-right, ease);
+}
+
+.animation-slide-out-left {
+  @include animation(0, 0.5s, animation-slide-out-left, ease);
+}
