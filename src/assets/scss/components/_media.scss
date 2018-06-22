@@ -11,11 +11,17 @@ strong {
   margin-bottom: rem-calc(10);
 
   &.image-left {
-    float: left;
+    @include breakpoint(medium) {
+      float: left;
+      margin: rem-calc(0 40 20 0);
+    }
   }
 
   &.image-right {
-    float: right;
+    @include breakpoint(medium) {
+      float: right;
+      margin: rem-calc(0 0 20 40);
+    }
   }
 }
 
@@ -42,7 +48,7 @@ strong {
 }
 
 .block-grid {
-  margin: rem-calc(40 0);
+  margin: rem-calc(20 0);
 }
 
 .block-grid-3col {
