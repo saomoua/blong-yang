@@ -6,6 +6,19 @@ strong {
   font-weight: $font-weight-bold;
 }
 
+.image-inline {
+  display: block;
+  margin-bottom: rem-calc(10);
+
+  &.image-left {
+    float: left;
+  }
+
+  &.image-right {
+    float: right;
+  }
+}
+
 .figure {
   @include box-shadow;
   background-color: $color-gray-dark;
