@@ -92,9 +92,30 @@ strong {
 
 .icon-2col {
   > .cell {
+    // background-color: $color-gray-light;
+    // position: relative;
+    // z-index: 0;
     @include breakpoint(medium) {
+      border-bottom: rem-calc(1) solid $color-gray-light;
       display: flex;
       flex-flow: row wrap;
+    }
+    // &::after {
+    // pseudo bgcolor extension using grid-margin-x/y
+    //   display: block;
+    //   content: '';
+    //   position: absolute;
+    //   height: 110%;
+    //   width: 105%;
+    //   left: -20px;
+    //   top: -20px;
+    //   background-color: inherit;
+    //   z-index: -1;
+    // }
+    &:last-of-type {
+      @include breakpoint(medium) {
+        border-bottom: 0;
+      }
     }
   }
 }
