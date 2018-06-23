@@ -8,6 +8,7 @@
 // FONTS VARIABLES
 $font-fallback: Calibri, Arial, sans-serif;
 $font-family-lato: "Lato", $font-fallback;
+$font-family-lato-italic: "Lato Italic", $font-fallback;
 $font-body: $font-family-lato;
 $font-weight-bold: 700;
 $font-weight-light: 300;
@@ -25,7 +26,7 @@ $font-style-italic: italic;
 }
 // ITALIC
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Lato Italic';
   src: url("../fonts/lato/lato-italic.eot");
   src: url("../fonts/lato/lato-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/lato/lato-italic.svg#lato-italic") format('svg'), url("../fonts/lato/lato-italic.woff") format('woff'), url("../fonts/lato/lato-italic.woff2") format('woff2'), url("../fonts/lato/lato-italic.ttf") format('truetype');
   font-display: swap;
