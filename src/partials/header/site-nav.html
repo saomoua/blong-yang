@@ -3,19 +3,48 @@
     <h2 class="site-nav-title">Navigation:</h2>
     <ul class="site-nav-list">
       <li>
+        {{#unlesspage "about"}}
         <a href="about.html">About</a>
+        {{/unlesspage}}
+        
+        {{#if page-about }}
+        <a class="is-active" href="about.html">About</a>
+        {{/if}}
       </li>
       <li>
+        {{#unlesspage "issues"}}
         <a href="issues.html">Issues</a>
+        {{/unlesspage}}
+        
+        {{#if page-issues}}
+        <a class="is-active" href="issues.html">Issues</a>
+        {{/if}}
       </li>
       <li>
-        <a href="support.html">Support</a>
+        {{#unlesspage "support"}}
+        <a href="endorsements.html">Endorsements</a>
+        {{/unlesspage}}
+        
+        {{#if page-endorsements}}
+        <a class="is-active" href="endorsements.html">Endorsements</a>
+        {{/if}}
       </li>
       <li>
+        {{#unlesspage "contact"}}
         <a href="contact.html">Contact/Volunteer</a>
+        {{/unlesspage}}
+        
+        {{#if page-contact}}
+        <a class="is-active" href="contact.html">Contact/Volunteer</a>
+        {{/if}}
       </li>
       <li>
-        <a href="donate.html">Donate</a>
+        {{#unlesspage "donate"}}
+        <a class="button" href="donate.html">Donate</a>
+        {{/unlesspage}}
+        {{#if page-donate}}
+        <a class="is-active button" href="donate.html">Donate</a>
+        {{/if}}
       </li>
     </ul>
   </nav>
