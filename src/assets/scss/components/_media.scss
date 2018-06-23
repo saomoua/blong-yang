@@ -137,3 +137,55 @@ strong {
 .svg-sprite {
   display: none;
 }
+
+.quotes-2col {
+  > .cell {
+    border-bottom: rem-calc(1) solid $color-gray-light;
+    @include breakpoint(medium) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &:last-of-type {
+      @include breakpoint(medium) {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.quotes-2col-media {
+  @include breakpoint(medium) {
+    flex: 0 0 rem-calc(100);
+  }
+}
+
+.quotes-2col-content {
+  @include breakpoint(medium) {
+    flex: 0 0 85%;
+  }
+
+  blockquote {
+    border: 0;
+    font-family: $font-family-lato-italic;
+    padding: rem-calc(0 40);
+    position: relative;
+  }
+
+  .icon {
+    fill: $color-gray-light;
+    height: rem-calc(24);
+    position: absolute;
+    width: rem-calc(24);
+  }
+
+  .icon-quote-left {
+    left: 0;
+    top: 0;
+  }
+
+  .icon-quote-right {
+    bottom: 0;
+    right: 0;
+  }
+}
