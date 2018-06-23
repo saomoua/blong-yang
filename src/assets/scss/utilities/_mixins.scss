@@ -11,20 +11,11 @@
   box-shadow: $x $y $blur $spread $color;
 }
 @mixin button {
-  border: rem-calc(1) solid transparent;
+  color: $color-white;
   cursor: pointer;
-  font-family: $font-headings;
   font-size: rem-calc(18);
-  font-weight: bold;
-  text-transform: capitalize;
-
-  &:focus,
-  &:hover {
-    @include transition(all 100ms ease-in-out);
-    background-color: transparent;
-    border: rem-calc(1) solid $color-text;
-    color: $color-text;
-  }
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
 }
 // element centered on Y axis of container
 @mixin centered-axis-x($position: absolute, $left: 50%, $transformX: -50%) {
@@ -67,6 +58,10 @@
     color: $color-hover;
     text-decoration-color: $decoration-hover;
   }
+}
+@mixin links-underline-active($links-underline-active: $color-brand-yellow) {
+  border-bottom: rem-calc(4) solid $links-underline-active;
+  text-decoration: none;
 }
 @mixin list-reset() {
   list-style: none;
