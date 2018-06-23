@@ -6,6 +6,10 @@ strong {
   font-weight: $font-weight-bold;
 }
 
+.icon {
+  fill: $color-gray-medium;
+}
+
 .image-inline {
   display: block;
   margin-bottom: rem-calc(10);
@@ -83,6 +87,29 @@ strong {
       line-height: 1;
       padding: rem-calc(4 16);
     }
+  }
+}
+
+.icon-2col {
+  > .cell {
+    @include breakpoint(medium) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+}
+
+.icon-2col-media {
+  text-align: center;
+  @include breakpoint(medium) {
+    flex: 0 0 rem-calc(100);
+    text-align: left;
+  }
+}
+
+.icon-2col-content {
+  @include breakpoint(medium) {
+    flex: 0 0 85%;
   }
 }
 
