@@ -48,3 +48,7 @@
 .section {
   @include section-padding;
 }
+
+.section-tinted {
+  background-color: tint($color-gray-light, 85%);
+}
