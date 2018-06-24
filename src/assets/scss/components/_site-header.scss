@@ -45,8 +45,12 @@
   width: rem-calc(225);
 }
 
+.page-header {
+  padding-top: rem-calc(20);
+}
+
 .section {
-  @include section-padding;
+  // @include section-padding;
 }
 
 .section-tinted {
