@@ -1,5 +1,6 @@
 a {
   @include links-underline;
+  @include text-wrap;
 }
 
 strong {
