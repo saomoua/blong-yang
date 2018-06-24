@@ -7,7 +7,7 @@
   border-radius: $radius;
   background-clip: padding-box;
 }
-@mixin box-shadow($x: 0, $y: rem-calc(2), $blur: rem-calc(4), $spread: 0, $color: rgba($color-black, 0.1)) {
+@mixin box-shadow($x: rem-calc(4), $y: rem-calc(4), $blur: rem-calc(4), $spread: 0, $color: rgba($color-black, 0.15)) {
   box-shadow: $x $y $blur $spread $color;
 }
 @mixin button {
