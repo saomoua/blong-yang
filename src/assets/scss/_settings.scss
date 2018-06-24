@@ -72,7 +72,8 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   // primary: #1779ba,
   primary: $color-brand-blue,
-  secondary: #767676,
+  // secondary: #767676,
+  secondary: $color-brand-yellow,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -312,12 +313,14 @@ $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
 $buttongroup-radius-on-each: true;
 
-// 13. Callout
+// 13. 
 // -----------
 
 $callout-background: $color-white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($color-gray-dark, 0.25);
+// $callout-background-fade: 85%;
+// $callout-border: 1px solid rgba($color-gray-dark, 0.25);
+$callout-background-fade: 0;
+$callout-border: 1px solid rgba($callout-background, 0.25);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
