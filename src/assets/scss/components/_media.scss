@@ -11,6 +11,7 @@ strong {
 }
 
 .image-inline {
+  @include box-shadow;
   display: block;
   margin-bottom: rem-calc(10);
 
@@ -144,6 +145,7 @@ strong {
     @include breakpoint(medium) {
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-between;
     }
 
     &:last-of-type {
@@ -156,13 +158,13 @@ strong {
 
 .quotes-2col-media {
   @include breakpoint(medium) {
-    flex: 0 0 rem-calc(100);
+    flex: 0 0 rem-calc(250);
   }
 }
 
 .quotes-2col-content {
   @include breakpoint(medium) {
-    flex: 0 0 85%;
+    flex: 0 0 60%;
   }
 
   blockquote {
