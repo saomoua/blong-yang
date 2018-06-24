@@ -145,13 +145,10 @@ strong {
     @include breakpoint(medium) {
       display: flex;
       flex-flow: row wrap;
-      // justify-content: space-between;
     }
 
     &:last-of-type {
-      @include breakpoint(medium) {
-        border-bottom: 0;
-      }
+      border-bottom: 0;
     }
   }
 }
