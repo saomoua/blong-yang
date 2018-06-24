@@ -1,0 +1,15 @@
+a {
+  @include links-underline;
+  @include text-wrap;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+.title-primary {
+  @include title-primary;
+}
+.title-secondary {
+  @include title-secondary;
+}
