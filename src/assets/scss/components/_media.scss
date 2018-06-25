@@ -5,7 +5,7 @@
 .image-inline {
   @include box-shadow;
   display: inline-block;
-  margin-bottom: rem-calc(10);
+  margin-bottom: rem-calc(20);
 
   &.image-left {
     @include breakpoint(medium) {
@@ -27,8 +27,6 @@
   background-color: $color-gray-dark;
   margin: rem-calc(20 0);
   text-align: center;
-  // display: flex;
-  // flex-flow: column wrap;
 }
 
 .figure-image {}
