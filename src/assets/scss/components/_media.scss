@@ -2,6 +2,10 @@
   fill: $color-gray-medium;
 }
 
+.has-tip {
+  @include links-underline;
+}
+
 .image-inline {
   @include box-shadow;
   display: inline-block;
