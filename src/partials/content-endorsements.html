@@ -2,7 +2,7 @@
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
-        <h1 class="section-title-primary">Endorsements</h1>
+        <h1 class="title-primary">Endorsements</h1>
       </div>
     </div>
   </div>
@@ -13,11 +13,11 @@
     <header class="section-header">
       <div class="grid-x">
         <div class="cell">
-          <h2 class="section-title-secondary">Who Supports Blong?</h2>
+          <h2 class="title-secondary">Who Supports Blong?</h2>
         </div>
       </div>
     </header>
-    <div class="grid-x grid-padding-x grid-padding-y quotes-2col">
+    <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
       {{#each data-endorsements.quotes}}
       
         {{#ifpage "endorsements"}}
@@ -28,7 +28,7 @@
             </div>
             <div class="quotes-2col-content">
               <p class="quotes-2col-attribute">{{this.quotes-attribute}}</p>
-              <blockquote>
+              <blockquote class="blockquote">
                 <svg class="svg icon icon-quote-left">
                   <use xlink:href="#icon-quote-left"></use>
                 </svg>
