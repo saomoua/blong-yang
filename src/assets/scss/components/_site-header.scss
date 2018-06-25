@@ -50,7 +50,7 @@
 }
 
 .section {
-  // @include section-padding;
+  @include section-padding;
 }
 
 .section-tinted {
