@@ -44,6 +44,11 @@
   position: absolute;
   width: 1px;
 }
+@mixin links-external() {
+  .svg {
+    fill: rgba($color-brand-blue, .5);
+  }
+}
 @mixin links-underline($color: $color-links, $font-weight: $font-weight-bold, $decoration-color: $color-links-underline, $color-hover: $color-links-hover, $decoration-hover: $color-links-hover) {
   @include antialiasing;
   @include transition(all 150ms ease-in-out);
