@@ -1,19 +1,10 @@
-a {
-  @include links-underline;
-  @include text-wrap;
-}
-
-strong {
-  font-weight: $font-weight-bold;
-}
-
 .icon {
   fill: $color-gray-medium;
 }
 
 .image-inline {
   @include box-shadow;
-  display: block;
+  display: inline-block;
   margin-bottom: rem-calc(10);
 
   &.image-left {
@@ -155,9 +146,8 @@ strong {
 }
 
 .quotes-2col-media {
-  @include breakpoint(medium) {
-    flex: 0 0 rem-calc(250);
-    margin-right: rem-calc(40);
+  .image-inline {
+    margin-bottom: 0;
   }
 }
 
@@ -167,13 +157,6 @@ strong {
 }
 
 .quotes-2col-content {
-  @include breakpoint(medium) {
-    flex: 0 0 58%;
-  }
-  @include breakpoint(xlarge) {
-    flex: 0 0 68%;
-  }
-
   blockquote {
     border: 0;
     font-family: $font-family-lato-italic;
@@ -196,5 +179,66 @@ strong {
   .icon-quote-right {
     bottom: 0;
     right: 0;
+  }
+}
+
+.quotes-2col-narrow {
+  .quotes-2col-media {
+    @include breakpoint(medium) {
+      flex: 0 0 rem-calc(250);
+      margin-right: rem-calc(40);
+    }
+  }
+
+  .quotes-2col-content {
+    @include breakpoint(medium) {
+      flex: 0 0 58%;
+    }
+    @include breakpoint(xlarge) {
+      flex: 0 0 68%;
+    }
+  }
+}
+
+.quotes-2col-large {
+  > .cell {
+    border: 0;
+  }
+
+  .quotes-2col-media {}
+
+  .quotes-2col-content {}
+
+  .blockquote {
+    p {
+      font-size: rem-calc(24);
+    }
+  }
+}
+
+.quotes-2col-dark {
+  background-color: $color-gray-dark;
+
+  > .cell {
+    border: 0;
+  }
+
+  .quotes-2col-media {
+    text-align: center;
+  }
+
+  .quotes-2col-content {
+    color: $color-white;
+    padding: rem-calc(20);
+  }
+
+  h2 {
+    color: $color-white;
+  }
+
+  .blockquote {
+    p {
+      color: $color-white;
+    }
   }
 }
