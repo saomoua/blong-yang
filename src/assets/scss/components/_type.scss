@@ -10,6 +10,11 @@ a {
   @include text-wrap;
 }
 
+.links-external {
+  @include links-external;
+  @include text-wrap;
+}
+
 .main-contents {
   li,
   p {
