@@ -1,6 +1,24 @@
+body {
+  line-height: $global-lineheight;
+  @include breakpoint(large) {
+    line-height: 1.8;
+  }
+}
+
 a {
   @include links-underline;
   @include text-wrap;
+}
+
+.main-contents {
+  li,
+  p {
+    font-size: rem-calc(16);
+    @include breakpoint(large) {
+      font-size: rem-calc(18);
+      line-height: 1.8;
+    }
+  }
 }
 
 strong {
@@ -10,9 +28,11 @@ strong {
 .title-primary {
   @include title-primary;
 }
+
 .title-secondary {
   @include title-secondary;
 }
+
 .title-tertiary {
   @include title-tertiary;
 }
