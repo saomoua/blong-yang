@@ -38,6 +38,10 @@
     }
 
     &:last-of-type {
+      @include breakpoint(large) {
+        margin-right: 0;
+      }
+
       > a {
         text-transform: uppercase;
       }
