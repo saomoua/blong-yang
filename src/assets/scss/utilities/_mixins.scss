@@ -94,6 +94,13 @@
     font-size: rem-calc(32);
   }
 }
+@mixin title-tertiary {
+  font-size: rem-calc(20);
+  line-height: 1.2;
+  @include breakpoint(large) {
+    font-size: rem-calc(24);
+  }
+}
 @mixin text-shadow($x: 0, $y: rem-calc(2), $blur: rem-calc(2), $color: rgba($color-black, 0.5)) {
   text-shadow: $x $y $blur $color;
 }
