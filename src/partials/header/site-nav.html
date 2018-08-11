@@ -30,6 +30,15 @@
         {{/if}}
       </li>
       <li>
+        {{#unlesspage "news-events"}}
+        <a href="news-events.html">News/Events</a>
+        {{/unlesspage}}
+        
+        {{#if page-news-events}}
+        <a class="is-active" href="news-events.html">News/Events</a>
+        {{/if}}
+      </li>
+      <li>
         {{#unlesspage "contact"}}
         <a href="contact.html">Contact/Volunteer</a>
         {{/unlesspage}}
