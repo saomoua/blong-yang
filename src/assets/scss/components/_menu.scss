@@ -34,7 +34,7 @@
 
   > li {
     @include breakpoint(large) {
-      margin: rem-calc(0 20);
+      margin: rem-calc(0 12);
     }
 
     &:last-of-type {
