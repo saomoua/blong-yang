@@ -1,7 +1,7 @@
 {
   "quotes": {
-    "pages": {
-      "quotes-endorsements": {
+    "sections": {
+      "endorsements-golden-valley": {
         "1": {
           "quotes-image": "assets/img/endorsements/endorse-dahlman",
           "quotes-image-alt": "Dennis & Valerie Dahlman from Golden Valley",
@@ -19,50 +19,54 @@
           "quotes-image-alt": "DeDe and Tom Scanlon from Golden Valley",
           "quotes-attribute": "DeDe and Tom Scanlon, Golden Valley",
           "quotes-testimonial": "Without a doubt, Blong is the most qualified person for Hennepin County Commissioner District 2. As a refugee immigrating to America with his family, he overcame great adversity to become an attorney and the first Hmong-American elected to the Minneapolis City Council. We have known Blong for several years. We trust him to do the right thing. He will not be a candidate who makes promises that he does not keep. His experience, honesty and ability to look at issues from all sides will allow him to study any problems and concerns that affect the communities he represents. He is a listener and a problem solver who will work closely with the communities to find a solution to their concerns."
-        },
-        "4": {
+        }
+      },
+      "endorsements-minneapolis": {
+        "1": {
           "quotes-image": "assets/img/endorsements/endorse-hardeman",
           "quotes-image-alt": "Kelley Hardeman from Minneapolis",
           "quotes-attribute": "Kelley Hardeman, Minneapolis",
           "quotes-testimonial": "Blong has my support. He’s the most capable and experienced candidate to bring more enhancements to District 2. He is respectful of this community and has defended the Northside through and through. He answers my calls and follows up on every situation."
         },
-        "5": {
+        "2": {
           "quotes-image": "assets/img/endorsements/endorse-gaba",
           "quotes-image-alt": "Mohammad Gaba from Minneapolis",
           "quotes-attribute": "Mohammad Gaba, Minneapolis",
           "quotes-testimonial": "I support Blong because he cares deeply about diversity, inclusion, and equity. As a refugee who grew up here, Blong relates to my struggles and understands my priorities as a Somali American. He is open and available to all."
         },
-        "6": {
+        "3": {
           "quotes-image": "assets/img/endorsements/endorse-yang",
           "quotes-image-alt": "John & Pangthao Yang from Minneapolis",
           "quotes-attribute": "John & Pangthao Yang, Minneapolis",
           "quotes-testimonial": "We have noticed a positive change in North Minneapolis during Blong’s time in office. We appreciate his hard work. For the first time, we had someone who could help us navigate the system."
         },
-        "7": {
+        "4": {
           "quotes-image": "assets/img/endorsements/endorse-lefleur-marrari",
           "quotes-image-alt": "Giuseppe Marrari & Mike LaFleur from Minneapolis",
           "quotes-attribute": "Giuseppe Marrari & Mike LaFleur, Minneapolis",
           "quotes-testimonial": "Blong’s personal journey from a refugee camp to where he is today has made him empathetic to the needs of the under-represented. He has tirelessly stood up for the little guy and for what’s right, even when others may have been swayed by popular opinion. He has also stood up to extreme cultural pressure in pushing for LGBTQ and women’s rights in the Hmong community. Best of all, Blong is humble about all of this. You’ll never see him boast about all his accomplishments. But we guarantee you, anyone who has personally worked with Blong on an issue won’t stop talking about how good he is as a public servant. We’re excited to see what Blong can do as County Commissioner. We know he will work hard to get things done, improve efficiency, and increase accessibility to County services for all residents."
         },
-        "8": {
+        "5": {
           "quotes-image": "assets/img/endorsements/endorse-hoag",
           "quotes-image-alt": "Peter Hoag from Minneapolis",
           "quotes-attribute": "Peter Hoag, Minneapolis",
           "quotes-testimonial": "I believe Blong will fairly represent me even though we grew up with different cultural traditions."
         },
-        "9": {
+        "6": {
           "quotes-image": "assets/img/endorsements/endorse-mpls-firefighters",
           "quotes-image-alt": "Mark Lakosky from Minneapolis Firefighters, Local 82",
           "quotes-attribute": "Mark Lakosky, President, MFD L82",
           "quotes-testimonial": "I had the privilege to work with Blong on a number of public safety issues concerning the Minneapolis Fire Department. I can say that I have never seen an elected official who was always aware and sensitive to the needs of his constituents and who worked daily to improve their lives and experiences in the City of Minneapolis. Hennepin County would be served well by electing Blong."
-        },
-        "10": {
+        }
+      },
+      "endorsements-plymouth": {
+        "1": {
           "quotes-image": "assets/img/endorsements/endorse-erickson",
           "quotes-image-alt": "Rolf & Jean Erickson from Plymouth",
           "quotes-attribute": "Rolf & Jean Erickson, Plymouth",
           "quotes-testimonial": "We support Blong for Hennepin County Commissioner District 2 because he is absolutely the best candidate. He is an honorable man and he will hear and represent ALL citizens of the district fairly and equally."
         },
-        "11": {
+        "2": {
           "quotes-image": "assets/img/endorsements/endorse-groetken",
           "quotes-image-alt": "Mary & Terry Groetken from Plymouth",
           "quotes-attribute": "Mary & Terry Groetken, Plymouth",
