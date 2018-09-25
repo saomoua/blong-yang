@@ -17,11 +17,12 @@
         </div>
       </div>
     </header>
-    <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
-      {{#each data-endorsements.quotes}}
-      
-        {{#ifpage "endorsements"}}
-        
+    {{#each data-endorsements.quotes}}
+      {{#ifpage "endorsements"}}
+      <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
+          <div class="cell">
+            <h3 class="title-tertiary">Supporters in Golden Valley</h3>
+          </div>
           {{#each this.endorsements-golden-valley}}
           <div class="cell">
             <div class="quotes-2col-media">
@@ -41,7 +42,12 @@
             </div>
           </div>
           {{/each}}
-          
+        </div>
+        
+        <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
+            <div class="cell">
+              <h3 class="title-tertiary">Supporters in Minneapolis</h3>
+            </div>
           {{#each this.endorsements-minneapolis}}
           <div class="cell">
             <div class="quotes-2col-media">
@@ -61,7 +67,12 @@
             </div>
           </div>
           {{/each}}
-          
+        </div>
+        
+        <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
+            <div class="cell">
+              <h3 class="title-tertiary">Supporters in Plymouth</h3>
+            </div>
           {{#each this.endorsements-plymouth}}
           <div class="cell">
             <div class="quotes-2col-media">
@@ -81,7 +92,12 @@
             </div>
           </div>
           {{/each}}
+        </div>
           
+        <div class="grid-x grid-padding-x grid-padding-y quotes-2col quotes-2col-narrow">
+            <div class="cell">
+              <h3 class="title-tertiary">Supporters in St. Anthony</h3>
+            </div>
           {{#each this.endorsements-stanthony}}
           <div class="cell">
             <div class="quotes-2col-media">
@@ -101,10 +117,9 @@
             </div>
           </div>
           {{/each}}
-          
+        </div>
         {{/ifpage}}
         
       {{/each}}
-    </div>
   </div>
 </section>
