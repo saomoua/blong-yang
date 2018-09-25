@@ -82,6 +82,26 @@
           </div>
           {{/each}}
           
+          {{#each this.endorsements-stanthony}}
+          <div class="cell">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]" alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                    <use xlink:href="#icon-quote-right"></use>
+                  </svg>
+              </blockquote>
+            </div>
+          </div>
+          {{/each}}
+          
         {{/ifpage}}
         
       {{/each}}
