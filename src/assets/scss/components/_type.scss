@@ -41,3 +41,11 @@ strong {
 .title-tertiary {
   @include title-tertiary;
 }
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
