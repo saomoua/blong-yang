@@ -134,20 +134,24 @@
 }
 
 .quotes-2col {
-  > .cell {
-    border-bottom: rem-calc(1) solid $color-gray-light;
-    @include breakpoint(medium) {
-      display: flex;
-      flex-flow: row wrap;
-    }
+  border-bottom: rem-calc(1) solid $color-gray-light;
+  padding: rem-calc(20) 0;
+  @include breakpoint(medium) {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
-    &:last-of-type {
-      border-bottom: 0;
-    }
+  &:last-of-type {
+    border-bottom: 0;
   }
 }
 
 .quotes-2col-media {
+  @include breakpoint(medium) {
+    flex: 0 0 rem-calc(250);
+    margin-right: rem-calc(40);
+  }
+
   .image-inline {
     margin-bottom: 0;
   }
@@ -159,6 +163,13 @@
 }
 
 .quotes-2col-content {
+  @include breakpoint(medium) {
+    flex: 0 0 58%;
+  }
+  @include breakpoint(xlarge) {
+    flex: 0 0 66%;
+  }
+
   blockquote {
     border: 0;
     font-family: $font-family-lato-italic;
@@ -181,40 +192,6 @@
   .icon-quote-right {
     bottom: 0;
     right: 0;
-  }
-}
-
-.quotes-2col-narrow {
-  .quotes-2col-media {
-    @include breakpoint(medium) {
-      flex: 0 0 rem-calc(250);
-      margin-right: rem-calc(40);
-    }
-  }
-
-  .quotes-2col-content {
-    @include breakpoint(medium) {
-      flex: 0 0 58%;
-    }
-    @include breakpoint(xlarge) {
-      flex: 0 0 66%;
-    }
-  }
-}
-
-.quotes-2col-large {
-  > .cell {
-    border: 0;
-  }
-
-  .quotes-2col-media {}
-
-  .quotes-2col-content {}
-
-  .blockquote {
-    p {
-      font-size: rem-calc(24);
-    }
   }
 }
 
