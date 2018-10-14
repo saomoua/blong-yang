@@ -18,36 +18,11 @@
       </div>
     </header>
 
-    <div class="grid-x grid-padding-x grid-padding-y">
-      <div class="cell">
-        <div class="quotes-2col">
-          <div class="quotes-2col-media">
-            <img class="image-inline" src="assets/img/endorsements/endorse-sheriff-deputy-small.jpg" data-interchange="[assets/img/endorsements/endorse-sheriff-deputy-small.jpg, small],
-[assets/img/endorsements/endorse-sheriff-deputy-large.jpg, large]" alt="Photo of Hennepin County Sheriff’s Deputies Association" />
-          </div>
-          <div class="quotes-2col-content">
-            <h3 class="quotes-2col-attribute">The Hennepin County Sheriff’s Deputies Association in their endorsement of Blong</h3>
-            <blockquote class="blockquote">
-              <svg class="svg icon icon-quote-left">
-                <use xlink:href="#icon-quote-left"></use>
-              </svg>
-              <p>Our Association feels your past experience serving on the Minneapolis City Council will serve the citizens of
-  Hennepin County and particularly District 2 very well.</p>
-              <svg class="svg icon icon-quote-right">
-                <use xlink:href="#icon-quote-right"></use>
-              </svg>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {{#each data-endorsements.quotes}}
+    {{#each data-endorsements-general.quotes}}
       {{#ifpage "endorsements"}}
         <div class="grid-x grid-padding-x grid-padding-y">
           <div class="cell">
-            <h3 class="title-tertiary text-uppercase font-light">Supporters in Golden Valley</h3>
-            {{#each this.endorsements-golden-valley}}
+            {{#each this.endorsements-general}}
               <div class="quotes-2col">
                 <div class="quotes-2col-media">
                   <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
