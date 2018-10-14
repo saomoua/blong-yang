@@ -1,0 +1,32 @@
+{
+  "quotes": {
+    "sections": {
+      "endorsements-golden-valley": {
+        "1": {
+          "quotes-image": "dahlman",
+          "quotes-image-alt": "Dennis & Valerie Dahlman from Golden Valley",
+          "quotes-attribute": "Dennis & Valerie Dahlman, Golden Valley",
+          "quotes-testimonial": "We are very confident Blong will be an outstanding Hennepin County Commissioner. We admire his commitment, compassion, inclusiveness and judgment as a political leader. His courage and integrity will serve us well. He listens and then acts. He will be an effective voice for positive change."
+        },
+        "2": {
+          "quotes-image": "pentel",
+          "quotes-image-alt": "Paula Pentel from Golden Valley",
+          "quotes-attribute": "Paula Pentel, Golden Valley",
+          "quotes-testimonial": "Blong understands the possibilities of County Commissioner and through his life experiences, legal training, and listening, he will best represent the diverse residents of District 2."
+        },
+        "3": {
+          "quotes-image": "scanlon",
+          "quotes-image-alt": "DeDe and Tom Scanlon from Golden Valley",
+          "quotes-attribute": "DeDe and Tom Scanlon, Golden Valley",
+          "quotes-testimonial": "Without a doubt, Blong is the most qualified person for Hennepin County Commissioner District 2. As a refugee immigrating to America with his family, he overcame great adversity to become an attorney and the first Hmong-American elected to the Minneapolis City Council. We have known Blong for several years. We trust him to do the right thing. He will not be a candidate who makes promises that he does not keep. His experience, honesty and ability to look at issues from all sides will allow him to study any problems and concerns that affect the communities he represents. He is a listener and a problem solver who will work closely with the communities to find a solution to their concerns."
+        },
+        "4": {
+          "quotes-image": "snope",
+          "quotes-image-alt": "Andy Snope, Golden Valley",
+          "quotes-attribute": "Andy Snope, Golden Valley",
+          "quotes-testimonial": "I support Blong because he has a grounded, thought-out, information gathering, common sense approach to decision making. He is easy to talk to and he listens. I feel like I have an advocate in government with Blong."
+        }
+      }
+    }
+  }
+}
