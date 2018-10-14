@@ -1,0 +1,32 @@
+{
+  "quotes": {
+    "sections": {
+      "endorsements-plymouth": {
+        "1": {
+          "quotes-image": "beard",
+          "quotes-image-alt": "Marge Beard, Plymouth",
+          "quotes-attribute": "Marge Beard, Plymouth",
+          "quotes-testimonial": "Blong is right for District 2 and he is right for Plymouth!  He has the hands-on experience to make strong policy decisions and to manage the 2nd largest budget in the state. Blong will be responsive to and represent the entire district."
+        },
+        "2": {
+          "quotes-image": "erickson",
+          "quotes-image-alt": "Rolf & Jean Erickson from Plymouth",
+          "quotes-attribute": "Rolf & Jean Erickson, Plymouth",
+          "quotes-testimonial": "We support Blong for Hennepin County Commissioner District 2 because he is absolutely the best candidate. He is an honorable man and he will hear and represent ALL citizens of the district fairly and equally."
+        },
+        "3": {
+          "quotes-image": "groetken",
+          "quotes-image-alt": "Mary & Terry Groetken from Plymouth",
+          "quotes-attribute": "Mary & Terry Groetken, Plymouth",
+          "quotes-testimonial": "We are supporting Blong because we know him to be an intelligent, thoughtful person who thinks about all sides of the issues before he makes decisions. His decisions are made with common sense behind them — especially anything that has to do with taxpayer money. He truly respects all people and listens."
+        },
+        "4": {
+          "quotes-image": "rosen",
+          "quotes-image-alt": "Larry Rosen, Plymouth",
+          "quotes-attribute": "Larry Rosen, Plymouth",
+          "quotes-testimonial": "I never get involved in politics but I’ve known Blong for a number of years and he’s a good guy. That’s why I support him. He’s a good guy."
+        }
+      }
+    }
+  }
+}
