@@ -19,111 +19,153 @@
     </header>
 
     {{#each data-endorsements-general.quotes}}
-      {{#ifpage "endorsements"}}
-        <div class="grid-x grid-padding-x grid-padding-y">
-          <div class="cell">
-            {{#each this.endorsements-general}}
-              <div class="quotes-2col">
-                <div class="quotes-2col-media">
-                  <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
-                    alt="Photo of {{this.quotes-image-alt}}" />
-                </div>
-                <div class="quotes-2col-content">
-                  <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
-                  <blockquote class="blockquote">
-                    <svg class="svg icon icon-quote-left">
-                      <use xlink:href="#icon-quote-left"></use>
-                    </svg>
-                    <p>{{this.quotes-testimonial}}</p>
-                    <svg class="svg icon icon-quote-right">
-                      <use xlink:href="#icon-quote-right"></use>
-                    </svg>
-                  </blockquote>
-                </div>
-              </div>
-            {{/each}}
+    {{#ifpage "endorsements"}}
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell">
+        {{#each this.endorsements-general}}
+          <div class="quotes-2col">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
+                alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                  <use xlink:href="#icon-quote-right"></use>
+                </svg>
+              </blockquote>
+            </div>
           </div>
-        </div>
-
-        <div class="grid-x grid-padding-x grid-padding-y">
-          <div class="cell">
-            <h3 class="title-tertiary text-uppercase font-light">Supporters in Minneapolis</h3>
-            {{#each this.endorsements-minneapolis}}
-              <div class="quotes-2col">
-                <div class="quotes-2col-media">
-                  <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
-                    alt="Photo of {{this.quotes-image-alt}}" />
-                </div>
-                <div class="quotes-2col-content">
-                  <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
-                  <blockquote class="blockquote">
-                    <svg class="svg icon icon-quote-left">
-                      <use xlink:href="#icon-quote-left"></use>
-                    </svg>
-                    <p>{{this.quotes-testimonial}}</p>
-                    <svg class="svg icon icon-quote-right">
-                      <use xlink:href="#icon-quote-right"></use>
-                    </svg>
-                  </blockquote>
-                </div>
-              </div>
-            {{/each}}
-          </div>
-        </div>
-
-        <div class="grid-x grid-padding-x grid-padding-y">
-          <div class="cell">
-            <h3 class="title-tertiary text-uppercase font-light">Supporters in Plymouth</h3>
-            {{#each this.endorsements-plymouth}}
-              <div class="quotes-2col">
-                <div class="quotes-2col-media">
-                  <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
-                    alt="Photo of {{this.quotes-image-alt}}" />
-                </div>
-                <div class="quotes-2col-content">
-                  <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
-                  <blockquote class="blockquote">
-                    <svg class="svg icon icon-quote-left">
-                      <use xlink:href="#icon-quote-left"></use>
-                    </svg>
-                    <p>{{this.quotes-testimonial}}</p>
-                    <svg class="svg icon icon-quote-right">
-                      <use xlink:href="#icon-quote-right"></use>
-                    </svg>
-                  </blockquote>
-                </div>
-              </div>
-            {{/each}}
-          </div>
-        </div>
-
-        <div class="grid-x grid-padding-x grid-padding-y">
-          <div class="cell">
-            <h3 class="title-tertiary text-uppercase font-light">Supporters in St. Anthony</h3>
-            {{#each this.endorsements-stanthony}}
-              <div class="quotes-2col">
-                <div class="quotes-2col-media">
-                  <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
-                    alt="Photo of {{this.quotes-image-alt}}" />
-                </div>
-                <div class="quotes-2col-content">
-                  <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
-                  <blockquote class="blockquote">
-                    <svg class="svg icon icon-quote-left">
-                      <use xlink:href="#icon-quote-left"></use>
-                    </svg>
-                    <p>{{this.quotes-testimonial}}</p>
-                    <svg class="svg icon icon-quote-right">
-                      <use xlink:href="#icon-quote-right"></use>
-                    </svg>
-                  </blockquote>
-                </div>
-              </div>
-          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/ifpage}}
     {{/each}}
-  </div>
-  {{/ifpage}}
 
-  {{/each}}
+    {{#each data-endorsements-goldenvalley.quotes}}
+    {{#ifpage "endorsements"}}
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell">
+        <h3 class="title-tertiary text-uppercase font-light">Supporters in Golden Valley</h3>
+        {{#each this.endorsements-golden-valley}}
+          <div class="quotes-2col">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
+                alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                  <use xlink:href="#icon-quote-right"></use>
+                </svg>
+              </blockquote>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/ifpage}}
+    {{/each}}
+
+    {{#each data-endorsements-mpls.quotes}}
+    {{#ifpage "endorsements"}}
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell">
+        <h3 class="title-tertiary text-uppercase font-light">Supporters in Minneapolis</h3>
+        {{#each this.endorsements-minneapolis}}
+          <div class="quotes-2col">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
+                alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                  <use xlink:href="#icon-quote-right"></use>
+                </svg>
+              </blockquote>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/ifpage}}
+    {{/each}}
+
+    {{#each data-endorsements-plymouth.quotes}}
+    {{#ifpage "endorsements"}}
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell">
+        <h3 class="title-tertiary text-uppercase font-light">Supporters in Plymouth</h3>
+        {{#each this.endorsements-plymouth}}
+          <div class="quotes-2col">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
+                alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                  <use xlink:href="#icon-quote-right"></use>
+                </svg>
+              </blockquote>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/ifpage}}
+    {{/each}}
+
+    {{#each data-endorsements-stanthony.quotes}}
+    {{#ifpage "endorsements"}}
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell">
+        <h3 class="title-tertiary text-uppercase font-light">Supporters in St. Anthony</h3>
+        {{#each this.endorsements-stanthony}}
+          <div class="quotes-2col">
+            <div class="quotes-2col-media">
+              <img class="image-inline" src="assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg" data-interchange="[assets/img/endorsements/endorse-{{this.quotes-image}}-small.jpg, small], [assets/img/endorsements/endorse-{{this.quotes-image}}-large.jpg, large]"
+                alt="Photo of {{this.quotes-image-alt}}" />
+            </div>
+            <div class="quotes-2col-content">
+              <h3 class="quotes-2col-attribute">{{this.quotes-attribute}}</h3>
+              <blockquote class="blockquote">
+                <svg class="svg icon icon-quote-left">
+                  <use xlink:href="#icon-quote-left"></use>
+                </svg>
+                <p>{{this.quotes-testimonial}}</p>
+                <svg class="svg icon icon-quote-right">
+                  <use xlink:href="#icon-quote-right"></use>
+                </svg>
+              </blockquote>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/ifpage}}
+    {{/each}}
+
   </div>
 </section>
