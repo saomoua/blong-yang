@@ -52,11 +52,25 @@
   }
 }
 
-
 .menu-label {
+  position: relative;
   text-transform: uppercase;
 
   +.menu-active {}
+
+  .svg {
+    fill: currentColor;
+    height: rem-calc(16);
+    position: absolute;
+    right: rem-calc(20);
+    top: rem-calc(20);
+    width: rem-calc(16);
+
+    @include breakpoint(large) {
+      top: rem-calc(5);
+      right: rem-calc(-20);
+    }
+  }
 }
 
 .menu-lvl-1 {
@@ -140,11 +154,7 @@
   }
 
   >li {
-    border-bottom: rem-calc(1) dashed rgba($color-white, .25);
-
-    &:last-child {
-      border-bottom: 0;
-    }
+    border-top: rem-calc(1) dashed rgba($color-white, .25);
 
     >a {
       color: $color-white;
