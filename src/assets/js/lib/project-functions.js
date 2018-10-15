@@ -7,6 +7,7 @@ var mainContents = $(".main-contents"),
 function siteNav() {
   $('.menu-label').unbind().on("click", function(e) {
     e.preventDefault();
+    $(this).find('.svg').toggleClass('icon-rotated');
     $(this).next('.menu-lvl-2').toggleClass('menu-active').fadeToggle();
   });
 }
