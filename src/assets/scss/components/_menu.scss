@@ -6,6 +6,7 @@
 
 .site-nav-offcanvas {
   background-color: $color-brand-blue;
+
   @include breakpoint(large) {
     width: 100% !important;
   }
@@ -25,6 +26,7 @@
 
 .site-nav-list {
   @include list-reset;
+
   @include breakpoint(large) {
     align-items: center;
     display: flex;
@@ -32,7 +34,7 @@
     justify-content: flex-end;
   }
 
-  > li {
+  >li {
     @include breakpoint(large) {
       margin: rem-calc(0 12);
     }
@@ -42,17 +44,18 @@
         margin-right: 0;
       }
 
-      > a {
+      >a {
         text-transform: uppercase;
       }
     }
 
-    > a:not(.button) {
+    >a:not(.button) {
       border-bottom: rem-calc(1) solid rgba($color-white, .25);
       color: $color-white;
       display: block;
       font-weight: $font-weight-bold;
       padding: rem-calc(16);
+
       @include breakpoint(large) {
         border-bottom: rem-calc(4) solid transparent;
         color: $color-brand-blue;
@@ -69,7 +72,7 @@
       }
     }
 
-    > a.button {
+    >a.button {
       margin-bottom: 0;
       padding: rem-calc(16);
       text-align: left;
@@ -85,12 +88,14 @@
   margin-bottom: 0;
   text-transform: uppercase;
   padding: rem-calc(16);
+
   @include breakpoint(large) {
     display: none;
   }
 }
 
 .button {
+
   &.is-active,
   &:focus,
   &:hover {
@@ -99,5 +104,11 @@
     background-color: $color-brand-yellow;
     color: $color-gray-dark;
     text-decoration: none;
+  }
+}
+
+.breadcrumbs {
+  li {
+    font-size: rem-calc(14);
   }
 }
