@@ -5,7 +5,7 @@ var mainContents = $(".main-contents"),
   siteHeaderHeight = $(".site-header").outerHeight();
 
 function siteNav() {
-  $('.menu-label').on("click", function(e) {
+  $('.menu-label').unbind().on("click", function(e) {
     e.preventDefault();
     $(this).next('.menu-lvl-2').toggleClass('menu-active').fadeToggle();
   });
