@@ -14,13 +14,16 @@
         </ul>
       </li>
       <li class="has-children">
-          <a class="menu-label" href="#">Support</a>
-          <ul class="menu-lvl-2">
-            <li>
-              <a class="is-indented {{active-class-endorsements}}" href="../support/endorsements.html">Endorsements</a>
-            </li>
-          </ul>
-        </li>
+        <a class="menu-label {{active-class-support}}" href="#">Support</a>
+        <ul class="menu-lvl-2">
+          <li>
+            <a class="is-indented {{active-class-endorsements}}" href="../support/endorsements.html">Endorsements</a>
+          </li>
+          <li>
+            <a class="is-indented {{active-class-contact}}" href="../support/contact.html">Contact</a>
+          </li>
+        </ul>
+      </li>
       </li>
       <!-- <li>
         {{#unlesspage "endorsements"}}
@@ -40,7 +43,7 @@
         <a class="is-active" href="news-events.html">News/Events</a>
         {{/if}}
       </li>
-      <li>
+      <!-- <li>
         {{#unlesspage "contact"}}
         <a href="contact.html">Contact/Volunteer</a>
         {{/unlesspage}}
@@ -48,7 +51,7 @@
         {{#if page-contact}}
         <a class="is-active" href="contact.html">Contact/Volunteer</a>
         {{/if}}
-      </li>
+      </li> -->
       <li>
         {{#unlesspage "donate"}}
         <a class="button" href="donate.html">Donate</a>
