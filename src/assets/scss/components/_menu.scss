@@ -103,6 +103,9 @@
       &.is-active,
       &:focus,
       &:hover {
+        background-color: $color-brand-yellow;
+        color: $color-brand-blue;
+
         @include breakpoint(large) {
           @include links-underline-active;
         }
@@ -116,11 +119,11 @@
       width: 100%;
     }
 
-    &.has-children {
-      >a {
-        padding-bottom: 0;
-      }
-    }
+    // &.has-children {
+    //   >a {
+    //     padding-bottom: 0;
+    //   }
+    // }
   }
 }
 
@@ -148,10 +151,15 @@
       display: block;
       padding: rem-calc(10);
 
+      &.is-active,
       &:focus,
       &:hover {
-        background-color: $color-brand-yellow;
-        color: $color-brand-blue;
+        color: $color-brand-yellow;
+
+        @include breakpoint(large) {
+          background-color: $color-brand-yellow;
+          color: $color-brand-blue;
+        }
       }
 
       &.is-indented {
