@@ -87,8 +87,16 @@
     border-bottom: rem-calc(1) solid rgba($color-white, .5);
     position: relative;
 
-    @include breakpoint(large) {
-      margin: rem-calc(0 20);
+    &:not(.has-children) {
+      @include breakpoint(large) {
+        margin-right: rem-calc(30);
+      }
+    }
+
+    &.has-children {
+      @include breakpoint(large) {
+        margin-right: rem-calc(60);
+      }
     }
 
     &:last-child {
