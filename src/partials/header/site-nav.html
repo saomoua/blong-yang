@@ -1,12 +1,17 @@
 <div class="off-canvas position-right in-canvas-for-large site-nav-offcanvas" id="site-nav-offcanvas" data-off-canvas>
   <nav class="site-nav">
     <h2 class="site-nav-title">Navigation:</h2>
-    <ul class="site-nav-list">
-      <li>
-        <a class="{{active-class-about}}" href="../about/">About</a>
-      </li>
-      <li>
-        <a class="{{active-class-priorities}}" href="../priorities.html">Priorities</a>
+    <ul class="site-nav-list menu-lvl-1">
+      <li class="has-children">
+        <a class="menu-label" href="#">About</a>
+        <ul class="menu-lvl-2">
+          <li>
+            <a class="is-indented {{active-class-about}}" href="../about/">About Blong</a>
+          </li>
+          <li>
+            <a class="is-indented {{active-class-priorities}}" href="../about/priorities.html">Priorities</a>
+          </li>
+        </ul>
       </li>
       <li>
         {{#unlesspage "endorsements"}}
