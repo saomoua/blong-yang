@@ -505,7 +505,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $color-gray-light;
+$offcanvas-background: $color-black;
 $offcanvas-shadow: 0 0 10px rgba($color-gray-dark, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($color-gray-dark, 0.25);
@@ -741,7 +741,7 @@ $reveal-padding: $global-padding;
 $reveal-border: 1px solid $color-gray-medium;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
-$reveal-overlay-background: rgba($color-gray-dark, 0.45);
+$reveal-overlay-background: rgba($color-black, 0.5);
 
 // 48. Slider
 // ----------
