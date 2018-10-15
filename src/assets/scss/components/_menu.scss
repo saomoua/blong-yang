@@ -35,11 +35,13 @@
   }
 
   >li {
+    border-bottom: rem-calc(1) solid rgba($color-white, .5);
+
     @include breakpoint(large) {
       margin: rem-calc(0 12);
     }
 
-    &:last-of-type {
+    &:last-child {
       @include breakpoint(large) {
         margin-right: 0;
       }
@@ -50,7 +52,6 @@
     }
 
     >a:not(.button) {
-      border-bottom: rem-calc(1) solid rgba($color-white, .25);
       color: $color-white;
       display: block;
       font-weight: $font-weight-bold;
@@ -78,6 +79,12 @@
       text-align: left;
       width: 100%;
     }
+
+    &.has-children {
+      >a {
+        padding-bottom: 0;
+      }
+    }
   }
 }
 
@@ -104,6 +111,55 @@
     background-color: $color-brand-yellow;
     color: $color-gray-dark;
     text-decoration: none;
+  }
+}
+
+
+.menu-label {
+  text-transform: uppercase;
+
+  +.menu-active {}
+}
+
+.menu-lvl-1 {
+  >li {
+    position: relative;
+  }
+}
+
+.menu-lvl-2 {
+  @include list-reset;
+
+  @include breakpoint(large) {
+    display: none;
+    left: auto;
+    position: absolute;
+    top: 100%;
+    width: rem-calc(200);
+  }
+
+  >li {
+    border-bottom: rem-calc(1) dashed rgba($color-white, .25);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    >a {
+      color: $color-white;
+      display: block;
+      padding: rem-calc(10);
+
+      &:focus,
+      &:hover {
+        background-color: $color-brand-blue;
+        color: $color-brand-blue;
+      }
+
+      &.is-indented {
+        padding-left: rem-calc(32);
+      }
+    }
   }
 }
 
