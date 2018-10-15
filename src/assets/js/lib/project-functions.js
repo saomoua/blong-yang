@@ -7,7 +7,7 @@ var mainContents = $(".main-contents"),
 function siteNav() {
   $('.menu-label').on("click", function(e) {
     e.preventDefault();
-    $(this).next('.menu-lvl-2').addClass('menu-active').fadeIn();
+    $(this).next('.menu-lvl-2').toggleClass('menu-active').fadeToggle();
   });
 }
 
