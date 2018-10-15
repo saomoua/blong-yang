@@ -1,7 +1,9 @@
 http://www.blongyang.org/index.html
-http://www.blongyang.org/about.html
-http://www.blongyang.org/issues.html
-http://www.blongyang.org/endorsements.html
+http://www.blongyang.org/about/index.html
+http://www.blongyang.org/about/priorities.html
+http://www.blongyang.org/work/index.html
+http://www.blongyang.org/work/work-community-gardens.html
+http://www.blongyang.org/support/endorsements.html
+http://www.blongyang.org/support/contact.html
 http://www.blongyang.org/news-events.html
-http://www.blongyang.org/contact.html
 http://www.blongyang.org/donate.html
