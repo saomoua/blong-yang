@@ -3,13 +3,7 @@
     <h2 class="site-nav-title">Navigation:</h2>
     <ul class="site-nav-list">
       <li>
-        {{#unlesspage "about"}}
-        <a href="../about/about.html">About</a>
-        {{/unlesspage}}
-
-        {{#if page-about }}
-        <a class="is-active" href="../about/about.html">About</a>
-        {{/if}}
+        <a class="{{active-class-about}}" href="../about/">About</a>
       </li>
       <li>
         {{#unlesspage "issues"}}
@@ -17,7 +11,7 @@
         {{/unlesspage}}
 
         {{#if page-issues}}
-        <a class="is-active" href="issues.html">Issues</a>
+        <a class="{{active-class}}" href="issues.html">Issues</a>
         {{/if}}
       </li>
       <li>
