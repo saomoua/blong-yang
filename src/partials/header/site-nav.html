@@ -13,7 +13,16 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li class="has-children">
+          <a class="menu-label" href="#">Support</a>
+          <ul class="menu-lvl-2">
+            <li>
+              <a class="is-indented {{active-class-endorsements}}" href="../support/endorsements.html">Endorsements</a>
+            </li>
+          </ul>
+        </li>
+      </li>
+      <!-- <li>
         {{#unlesspage "endorsements"}}
         <a href="endorsements.html">Endorsements</a>
         {{/unlesspage}}
@@ -21,7 +30,7 @@
         {{#if page-endorsements}}
         <a class="is-active" href="endorsements.html">Endorsements</a>
         {{/if}}
-      </li>
+      </li> -->
       <li>
         {{#unlesspage "news-events"}}
         <a href="news-events.html">News/Events</a>
