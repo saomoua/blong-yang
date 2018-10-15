@@ -122,6 +122,7 @@
 
         @include breakpoint(large) {
           @include links-underline-active;
+          background-color: transparent;
         }
       }
     }
