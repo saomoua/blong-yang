@@ -238,3 +238,9 @@
   padding-bottom: rem-calc(30);
   padding-left: rem-calc(30);
 }
+
+.hidden-video-desc {
+  .basic-figcaption {
+    @include is-clipped;
+  }
+}
