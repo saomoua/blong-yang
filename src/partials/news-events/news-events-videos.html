@@ -1,30 +1,40 @@
 <h3 class="title-tertiary">VIDEOS</h3>
 <ul class="list-events">
+  {{#each data-news-events-videos.news-events}}
+  {{#ifpage "news-events"}}
+  {{#each this.video-list}}
   <li>
-    <h2 class="title-secondary">Blong Yang for Hennepin County Commissioner</h2>
+    <h2 class="title-secondary">{{this.video-title}}</h2>
     <figure class="basic-figure-video">
       <div class="video-schema" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
-        <h2 class="video-schema-title show-for-sr" itemprop="name">Blong Yang for Hennepin County Commissioner</h2>
-        <meta itemprop="duration" content="T02M10S">
-        <meta itemprop="thumbnailUrl" content="http://i3.ytimg.com/vi/NKbTxVOuDuI/maxresdefault.jpg">
-        <meta itemprop="embedURL" content="https://www.youtube.com/embed/NKbTxVOuDuI">
-        <meta itemprop="uploadDate" content="2018-10-21T08:00:00+06:00">
+        <h2 class="video-schema-title show-for-sr" itemprop="name">{{this.video-title}}</h2>
+        <meta itemprop="duration" content="{{this.video-duration}}">
+        <meta itemprop="thumbnailUrl" content="http://i3.ytimg.com/vi/{{this.video-id}}/maxresdefault.jpg">
+        <meta itemprop="embedURL" content="https://www.youtube.com/embed/{{this.video-id}}">
+        <meta itemprop="uploadDate" content="{{this.video-upload-date}}T08:00:00+06:00">
         <meta itemprop="height" content="688">
         <meta itemprop="width" content="960">
         <div class="responsive-embed widescreen">
-          <iframe width="960" height="688" src="https://www.youtube.com/embed/NKbTxVOuDuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe width="960" height="688" src="https://www.youtube.com/embed/{{this.video-id}}" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen=""></iframe>
         </div>
         <figcaption class="basic-figcaption show-for-sr">
-          <p itemprop="description">Blong Yang, a former recipient of county services, is running to lead that same system. More specifically, he is running to be the next Hennepin County Commissioner in District 2. His experience includes interning with Hennepin County in the Child Protection Services; working for Legal Aid Society of Minneapolis where he advocated for clients on the issues of language access and social services; running his own solo law practice for ten years; represented clients from being civilly committed through the Hennepin County Bar Association's Commitment Defense Panel; working for the City of Minneapolis as a civil rights investigator; and being on the Minneapolis City Council for four years (2014-2017). While on the Council, he chaired the Public Safety, Civil Rights, and Emergency Management Committee. He worked hard to increase the number of police, fire, and 911 staff, thus decreasing the response time. He secured funding for body cameras and implicit bias training. He spearheaded the Infill Housing Program to build new homes on 300 city-owned empty lots with $1.5 million for a pilot first year. He resurrected $1 Housing (Vacant Housing Recycling) Program which saved almost 100 houses from demolition and converted them into new rehabbed homes, putting them back on the tax rolls. Lastly, he brought in over $100 million in development to the Ward he represented; helped to create over 300 jobs, some of which went to Northsiders; and assisted the start-up of three brewery small businesses. His experiences on the City Council will be fully transferable to the Hennepin County Board. He is endorsed by the Minneapolis Fire Fighters Local 82 and the Hennepin County Sheriff's Deputies Association. Vote for Blong Yang for Hennepin County Commissioner on November 6, 2018.</p>
+          <p itemprop="description">{{this.video-desc}}</p>
         </figcaption>
       </div>
     </figure>
   </li>
+  {{/each}}
+  {{/ifpage}}
+  {{/each}}
+
   <li>
-    <h2 class="title-secondary">Learn about Blong’s work on mental health by watching the NAMI Public Forum on Mental Health</h2>
+    <h2 class="title-secondary">Learn about Blong’s work on mental health by watching the NAMI Public Forum on Mental
+      Health</h2>
     <figure class="basic-figure-video">
       <div class="video-schema" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
-        <h2 class="video-schema-title show-for-sr" itemprop="name">Learn about Blong’s work on mental health by watching the NAMI Public Forum on Mental Health</h2>
+        <h2 class="video-schema-title show-for-sr" itemprop="name">Learn about Blong’s work on mental health by
+          watching the NAMI Public Forum on Mental Health</h2>
         <meta itemprop="duration" content="T01H20M33S">
         <meta itemprop="thumbnailUrl" content="http://i3.ytimg.com/vi/ykII5gD48ZA/maxresdefault.jpg">
         <meta itemprop="embedURL" content="https://www.youtube.com/embed/ykII5gD48ZA">
@@ -32,7 +42,8 @@
         <meta itemprop="height" content="688">
         <meta itemprop="width" content="960">
         <div class="responsive-embed widescreen">
-          <iframe width="960" height="688" src="https://www.youtube.com/embed/ykII5gD48ZA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe width="960" height="688" src="https://www.youtube.com/embed/ykII5gD48ZA" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen=""></iframe>
         </div>
         <figcaption class="basic-figcaption show-for-sr">
           <p itemprop="description">NAMI-Hennepin County District 2 - Hennepin County Commissioners Debate</p>
@@ -44,7 +55,8 @@
     <h2 class="title-secondary">Blong Yang on this week's episode of Motivation with Ron Henderson</h2>
     <figure class="basic-figure-video">
       <div class="video-schema" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
-        <h2 class="video-schema-title show-for-sr" itemprop="name">Blong Yang on this week's episode of Motivation with Ron Henderson</h2>
+        <h2 class="video-schema-title show-for-sr" itemprop="name">Blong Yang on this week's episode of Motivation with
+          Ron Henderson</h2>
         <meta itemprop="duration" content="T28M13S">
         <meta itemprop="thumbnailUrl" content="http://i3.ytimg.com/vi/gYj8ilIMXoc/maxresdefault.jpg">
         <meta itemprop="embedURL" content="https://www.youtube.com/embed/gYj8ilIMXoc">
@@ -52,10 +64,13 @@
         <meta itemprop="height" content="688">
         <meta itemprop="width" content="960">
         <div class="responsive-embed widescreen">
-          <iframe width="960" height="688" src="https://www.youtube.com/embed/gYj8ilIMXoc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe width="960" height="688" src="https://www.youtube.com/embed/gYj8ilIMXoc" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen=""></iframe>
         </div>
         <figcaption class="basic-figcaption show-for-sr">
-          <p itemprop="description">This episode of motivation Motivational speaker Ron Henderson aka "The Fitness King" get's up close and personal with Blong Yang, who is running for Hennepin county commissioner in district 2</p>
+          <p itemprop="description">This episode of motivation Motivational speaker Ron Henderson aka "The Fitness
+            King" get's up close and personal with Blong Yang, who is running for Hennepin county commissioner in
+            district 2</p>
         </figcaption>
       </div>
     </figure>
@@ -72,10 +87,12 @@
         <meta itemprop="height" content="688">
         <meta itemprop="width" content="960">
         <div class="responsive-embed widescreen">
-          <iframe width="960" height="688" src="https://www.youtube.com/embed/HZ3F3z8E0hM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe width="960" height="688" src="https://www.youtube.com/embed/HZ3F3z8E0hM" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen=""></iframe>
         </div>
         <figcaption class="basic-figcaption show-for-sr">
-          <p itemprop="description">Blong Yang, North Minneapolis resident, is running for Hennepin County Commissioner in District 2. Blong explains what a county commissioner does.</p>
+          <p itemprop="description">Blong Yang, North Minneapolis resident, is running for Hennepin County Commissioner
+            in District 2. Blong explains what a county commissioner does.</p>
         </figcaption>
       </div>
     </figure>
@@ -84,7 +101,8 @@
     <h2 class="title-secondary">Hennepin County Comissioner District 2 primary candidates forum</h2>
     <figure class="basic-figure-video">
       <div class="video-schema" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
-        <h2 class="video-schema-title show-for-sr" itemprop="name">Hennepin county commissioner dist 2 primary candidates forum</h2>
+        <h2 class="video-schema-title show-for-sr" itemprop="name">Hennepin county commissioner dist 2 primary
+          candidates forum</h2>
         <meta itemprop="duration" content="T1H21M01S">
         <meta itemprop="thumbnailUrl" content="http://i3.ytimg.com/vi/embed/P-ACTYIMjAI/maxresdefault.jpg">
         <meta itemprop="embedURL" content="https://www.youtube.com/embed/P-ACTYIMjAI">
@@ -92,10 +110,12 @@
         <meta itemprop="height" content="688">
         <meta itemprop="width" content="960">
         <div class="responsive-embed widescreen">
-          <iframe width="960" height="688" src="https://www.youtube.com/embed/P-ACTYIMjAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe width="960" height="688" src="https://www.youtube.com/embed/P-ACTYIMjAI" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen=""></iframe>
         </div>
         <figcaption class="basic-figcaption show-for-sr">
-          <p itemprop="description">Recorded July 30, 2018 at Golden Valley City Hall<br />Sponsored by the Golden Valley League of Women Voters</p>
+          <p itemprop="description">Recorded July 30, 2018 at Golden Valley City Hall<br />Sponsored by the Golden
+            Valley League of Women Voters</p>
         </figcaption>
       </div>
     </figure>
