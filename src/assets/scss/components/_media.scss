@@ -238,3 +238,7 @@
   padding-bottom: rem-calc(30);
   padding-left: rem-calc(30);
 }
+
+.show-for-sr {
+  @include is-clipped;
+}

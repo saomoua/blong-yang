@@ -1,7 +1,19 @@
-.list-events {
+.list-videos {
+  > li {
+    margin-bottom: rem-calc(40);
+  }
+}
+
+.list-articles {
+  > li {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+.list-videos,
+.list-articles {
   > li {
     border-bottom: rem-calc(1) solid $color-gray-light;
-    margin-bottom: rem-calc(40);
     padding-bottom: rem-calc(20);
 
     &:last-child {
